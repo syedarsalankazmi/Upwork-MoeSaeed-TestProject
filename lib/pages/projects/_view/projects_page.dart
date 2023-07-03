@@ -33,7 +33,6 @@ class ProjectsPage extends StatelessWidget {
                     ),
                     child: ListTile(
                       title: Text(task.title ?? "-"),
-                      trailing: Text(AppUtility.dateToDMHM(task.dateTime)),
                       onTap: () => {context.go('/details', extra: task)},
                     ),
                   );

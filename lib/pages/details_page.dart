@@ -24,14 +24,16 @@ class _DetailPageState extends State<DetailPage> {
           padding: EdgeInsets.symmetric(horizontal: 60),
           child: Column(
             children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  AppUtility.dateToDMHM(widget.task.dateTime),
-                  textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.grey[700]),
-                ),
-              ),
+              widget.task.dateTime != null
+                  ? Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        AppUtility.dateToDMHM(widget.task.dateTime),
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.grey[700]),
+                      ),
+                    )
+                  : SizedBox.shrink(),
               Padding(
                 padding: EdgeInsets.symmetric(
                   vertical: 10,
