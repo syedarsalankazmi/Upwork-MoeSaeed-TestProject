@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_list_app/home_page.dart';
+import 'package:task_list_app/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Task list App',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: HomePage(),
+      routerConfig: AppRoutes.routes,
     );
   }
 }
